@@ -24,7 +24,7 @@ function setScreenGame(d) {
             let img = document.createElement('img')
             img.className = 'img-cells'
             img.alt = 'a' + indexJ
-            img.src = '../assets/gifs/gif-ground/00.gif'
+            img.src = 'assets/gifs/gif-ground/00.gif'
             tdElement.appendChild(img)
             trElement.appendChild(tdElement)
         }
