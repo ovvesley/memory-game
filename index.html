@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jogo da Memoria</title>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/estilo.css">
+    <link rel="stylesheet" href="styles/screenLogin.css">
+    <link rel="stylesheet" href="styles/fonts/font-8bit.css">
+    <script src="scripts/startSession.js"></script>
+    <script src="scripts/startGame.js"></script>
+
+
+</head>
+
+
+<body onload="startSession()">
+    <div class="main">
+        <div class="screen">
+            <div class="menu">
+                <div class="menu-tab" id="character">
+                    <div>
+                        <span>img</span>
+                    </div>
+                </div>
+                <div class="menu-tab" id="point">
+                    <span>point</span>
+                </div>
+                <div class="menu-tab" id="themes">
+                    <span> exemple</span>
+                </div>
+            </div>
+            <div id="zone-game">
+                <div id="button-config">
+                    <button onclick="buttonConfig(this)">Ok</button>
+                </div>
+                <div id="screen-config-main">
+                    <div class="screens-config" class="screens-config" id='screen-login'>
+                        <div id="input-name">
+                            <h5>Digite seu Nome:</h5>
+                            <input id="username" type="text" value="">
+                        </div>
+                        <div id="input-character">
+                            <h6>Escolha seu Avatar</h6>
+                            <div>
+                                <img class="perfil" src="assets/perfil01.gif" alt="perfil00" onclick="avatarSelected(this)">
+                                <img class="perfil" src="assets/perfil02.gif" alt="perfil01" onclick="avatarSelected(this)">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="screens-config" id='screen-theme'>
+                        <h6>Escolha o cenario</h6>
+                        <div>
+                            <img class="theme" src="assets/gifs/02.gif" alt="theme00" onclick="themeSelected(this)" ">
+                            <img class="theme " src="assets/gifs/01.gif " alt="theme01 " onclick= "themeSelected(this) "">
+                        </div>
+                    </div>
+                    <div class="screens-config" id='screen-dificult'>
+                        <h6>Escolha a dificuldade</h6>
+                        <div>
+                            <img class="dificult" src="assets/dificuldades/03.gif" alt="00" onclick="dificultSelected(this)" ">
+                            <img class="dificult " src="assets/dificuldades/03.gif " alt="01 " onclick= "dificultSelected(this) "">
+                            <img class="dificult" src="assets/dificuldades/03.gif" alt="02" onclick="dificultSelected(this)" ">
+                            <img class="dificult " src="assets/dificuldades/03.gif " alt="03 " onclick= "dificultSelected(this) "">
+                        </div>
+                    </div>
+                </div>
+                <div id="screen-game">
+
+                </div>
+
+
+            </div>
+        </div>
+
+
+</body>
+
+</html>
