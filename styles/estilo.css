@@ -1,0 +1,33 @@
+.main {
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    transform: translateX(-50%);
+    font-weight: normal;
+    font-style: normal;
+}
+
+.menu {
+    position: relative;
+    display: flex;
+    /* background-color: aqua; */
+}
+
+.menu-tab {
+    position: relative;
+    left: 35%;
+    background-color: aquamarine;
+    margin: 2px;
+    padding: 10px;
+}
+
+#zone-game {
+    font-family: '8BITWONDERNominal';
+    color: #6b4262;
+    text-align: center;
+    background-color: bisque;
+    position: relative;
+    top: 80%;
+    width: 800px;
+    height: 550px;
+}
