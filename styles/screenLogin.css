@@ -1,0 +1,120 @@
+.screens-config {
+    position: absolute;
+    left: 29%;
+    top: 23%;
+}
+
+#button-config {
+    position: absolute;
+    left: 93%;
+    top: 50%;
+}
+
+#button-config button {
+    transition: ease-in-out 0.2s;
+    opacity: 0.2;
+    border: none;
+    width: 55px;
+    height: 100px;
+}
+
+#button-config button:hover {
+    opacity: 0.4;
+    transform: scale(1.2);
+}
+
+#zone-game {
+    background-image: url(../assets/bg01.gif);
+    background-repeat: no-repeat;
+    background-size: 120%;
+    background-position: -88px 0px;
+}
+
+#screen-theme {
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    top: 20%;
+}
+
+.perfil {
+    opacity: 0.60;
+    margin: 20px;
+    transition: transform cubic-bezier(0.215, 0.610, 0.355, 1) .2s;
+    max-width: 150px;
+    max-height: 150px;
+    border-radius: 20px;
+}
+
+.perfil:hover {
+    position: relative;
+    opacity: 1;
+    transform: scale(1.8)
+}
+
+#screen-login {
+    position: absolute;
+    left: 23.5%;
+}
+
+#input-name {
+    text-align: center;
+    font-size: 30px;
+    margin: 5px;
+    padding: 20px;
+}
+
+#input-name input {
+    font-family: '8BITWONDERNominal';
+    text-align: center;
+    font-size: 20px;
+    margin: 6px;
+    opacity: 0.6;
+    border: none;
+    width: 180px;
+    height: 45px;
+}
+
+.theme {
+    background-color: #BB818F;
+    opacity: 0.6;
+    margin-top: 10px;
+    padding: 2px;
+    border: 6px solid #412c37;
+    width: 150px;
+    height: 150px;
+}
+
+.theme:hover {
+    background-color: #48697c;
+    opacity: 1;
+}
+
+.dificult {
+    background-color: #BB818F;
+    opacity: 0.6;
+    margin-top: 10px;
+    padding: 2px;
+    border: 6px solid #412c37;
+    width: 50px;
+    height: 50px;
+}
+
+.dificult:hover {
+    background-color: #48697c;
+    opacity: 1;
+}
+
+.img-cells {
+    margin: 3px;
+    max-width: 60px;
+    max-height: 60px;
+    margin-left: 30px;
+}
+
+#screen-game {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 2%;
+}
