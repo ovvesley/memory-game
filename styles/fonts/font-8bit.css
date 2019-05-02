@@ -1,0 +1,11 @@
+@font-face {
+    font-family: '8BITWONDERNominal';
+    src: url('8bit-wonder.TTF');
+    src: url('8bit-wonder.TTF') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.palavra {
+    font-family: "8BITWONDERNominal";
+}
