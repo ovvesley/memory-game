@@ -3,8 +3,10 @@ function startGame() {
     setScreenGame(data)
         // showScreenGame()
         // gameRunning()
+
     isPoint()
         // restart()
+    verificacaoGanhar()
 
 }
 
@@ -27,7 +29,7 @@ function isIdentic(img1, img2) {
         console.log('diferente')
 }
 
-function makeAPoint(table) {
+function makeAPoint() {
     let imgCells = document.getElementsByClassName('img-cells')
     let img;
     let jogadas = new Array();
@@ -42,6 +44,8 @@ function makeAPoint(table) {
                     console.log('pontoo')
                     jogadas[0].alt = 'ok'
                     jogadas[1].alt = 'ok'
+                    addPoint()
+                    verificacaoGanhar()
                 } else {
                     console.log('n foi ponto')
                     setTimeout(() => {
@@ -59,6 +63,13 @@ function makeAPoint(table) {
             }
         }
     }
+}
+
+function addPoint() {
+    let p = document.getElementById('point').children[0]
+    let tmp = parseInt(p.textContent)
+    tmp++
+    p.textContent = tmp
 }
 
 function isPoiint(array) {
@@ -131,7 +142,11 @@ function setScreenGame(d) {
 }
 
 function setBgCells(img) {
-    img.src = 'assets/bgcells.gif'
+    if (dataLogin.theme == 'theme00') {
+        img.src = 'assets/bgcells4.gif'
+    } else {
+        img.src = 'assets/bgcells5.gif'
+    }
     img.className = 'imgBg-cells'
         // img.style.maxWidth = '60px'
         // img.style.maxHeigth = '60px'
@@ -143,27 +158,71 @@ function setBgCells(img) {
 }
 
 function setDificult(d) {
-    return d + 3
+    if (d == 0)
+        return 2
+    if (d == 1)
+        return 4
+    if (d == 2)
+        return 6
 }
 
-function getImage(indexImg) {
-    let pathImg = 'assets/gifs/gif-ground/' + '0' + indexImg + '.gif'
+function getImageScene1(indexImg) {
+    let pathImg = 'assets/gifs/gif-ground/scene-1/' + '0' + indexImg + '.gif'
     return pathImg
 }
 
-function getArrayTable(d) {
+function getImageScene2(indexImg) {
+    let pathImg = 'assets/gifs/gif-ground/scene-2/' + '0' + indexImg + '.jpg'
+    return pathImg
+}
+
+function createArrayTableScene1(d) {
     let qntdImg = (setDificult(d.dificult) * setDificult(d.dificult)) / 2
     let imgs = new Array()
     for (let indexI = 0; indexI < qntdImg; indexI++) {
-        let value = getImage(indexI)
+        let value = getImageScene1(indexI)
         imgs.push(value)
     }
     for (let indexI = 0; indexI < qntdImg; indexI++) {
-        let value = getImage(indexI)
+        let value = getImageScene1(indexI)
         imgs.push(value)
     }
     console.log(imgs)
     return imgs
+}
+
+function createArrayTableScene2(d) {
+    let qntdImg = (setDificult(d.dificult) * setDificult(d.dificult)) / 2
+    let imgs = new Array()
+    for (let indexI = 0; indexI < qntdImg; indexI++) {
+        let value = getImageScene2(indexI)
+        imgs.push(value)
+    }
+    for (let indexI = 0; indexI < qntdImg; indexI++) {
+        let value = getImageScene2(indexI)
+        imgs.push(value)
+    }
+    console.log(imgs)
+    return imgs
+}
+
+function getArrayTable(d) {
+    // let qntdImg = (setDificult(d.dificult) * setDificult(d.dificult)) / 2
+    // let imgs = new Array()
+    // for (let indexI = 0; indexI < qntdImg; indexI++) {
+    //     let value = getImageScene1(indexI)
+    //     imgs.push(value)
+    // }
+    // for (let indexI = 0; indexI < qntdImg; indexI++) {
+    //     let value = getImageScene1(indexI)
+    //     imgs.push(value)
+    // }
+    // console.log(imgs)
+    // return imgs
+    if (d.theme == 'theme00')
+        return createArrayTableScene1(d)
+    else
+        return createArrayTableScene2(d)
 }
 
 function shuffle(array) {

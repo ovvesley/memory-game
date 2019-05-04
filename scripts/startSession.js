@@ -22,6 +22,7 @@ function buttonConfig(b) {
     if (currentStateLoginScreen > 2) {
         b.style.display = 'none'
         console.log(dataLogin)
+        showMenu(true)
         startGame()
 
     }
@@ -33,6 +34,7 @@ function buttonConfig(b) {
 
 function showMenu(value) {
     let tabDetails = document.getElementsByClassName('menu')[0]
+    setMenu()
     if (value) {
         tabDetails.style.display = 'flex'
     } else {
@@ -40,6 +42,24 @@ function showMenu(value) {
     }
 
 }
+
+function setMenu() {
+    let character = document.getElementById('character').children[0]
+    let point = document.getElementById('point')
+    let themes = document.getElementById('themes')
+    character.alt = dataLogin.username;
+    character.src = getPerfil(dataLogin)
+    console.log(character)
+}
+
+function getPerfil(dataLogin) {
+    if (dataLogin.perfil == 'perfil00')
+        return 'assets/perfil01.gif'
+    else
+        return 'assets/perfil02.gif'
+
+}
+
 
 function startSession() {
     currentStateLoginScreen = stateLoginScreen.LoginScreen

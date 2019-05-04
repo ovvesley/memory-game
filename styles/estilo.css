@@ -11,19 +11,22 @@
     position: relative;
     display: flex;
     /* background-color: aqua; */
+    background-color: #ca84bb;
 }
 
 .menu-tab {
+    font-family: '8BITWONDERNominal';
     position: relative;
     left: 35%;
-    background-color: aquamarine;
-    margin: 2px;
+    background-color: #ca84bb;
+    margin-left: 20px;
     padding: 10px;
+    border-radius: 5px;
 }
 
 #zone-game {
     font-family: '8BITWONDERNominal';
-    color: #6b4262;
+    color: #8f6486;
     text-align: center;
     background-color: bisque;
     position: relative;
