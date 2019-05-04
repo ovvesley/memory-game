@@ -47,6 +47,8 @@ function setMenu() {
     let character = document.getElementById('character').children[0]
     let point = document.getElementById('point')
     let themes = document.getElementById('themes')
+    let username = document.getElementById('usernameView')
+    username.textContent = dataLogin.username;
     character.alt = dataLogin.username;
     character.src = getPerfil(dataLogin)
     console.log(character)

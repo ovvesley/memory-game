@@ -40,6 +40,25 @@
     transform: scale(1.2);
 }
 
+#credito {
+    opacity: 1;
+    color: white;
+    font-size: 10px;
+    position: absolute;
+    left: 5%;
+    top: 110%;
+}
+
+#usernameView {
+    position: relative;
+    left: 20%;
+    font-size: 30px;
+    text-align: center;
+    max-width: 150px;
+    max-height: 50px;
+    bottom: -30px;
+}
+
 
 /* .img-cells:hover{
     border-radius: 5px;

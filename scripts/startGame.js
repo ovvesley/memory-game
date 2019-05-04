@@ -114,17 +114,6 @@ function selectImg(event) {
 
 }
 
-function girarTela(event1, event2) {
-    //let cell2 = event.srcElement
-    // console.log(event1.target.offsetParent.children[0])
-    // console.log(event2.target.offsetParent.children[0])
-    // event1.target.offsetParent.children[0].style.display = 'block'
-    // event2.target.offsetParent.children[0].style.display = 'block'
-    // console.log(event)
-    // event1.srcElement.style.display = 'none'
-    // event1.srcElement.style.display = 'none'
-}
-
 
 function getConfigGame() {
     return dataLogin
