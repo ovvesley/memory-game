@@ -22,6 +22,24 @@
     font-size: 72px;
 }
 
+#restart {}
+
+#restart {
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    width: 450px;
+    height: 300px;
+    transition: ease-in-out 0.5s;
+    opacity: 0.4;
+    border: none;
+}
+
+#restart:hover {
+    opacity: 0.9;
+    transform: scale(1.2);
+}
+
 
 /* .img-cells:hover{
     border-radius: 5px;

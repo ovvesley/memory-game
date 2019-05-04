@@ -2,13 +2,30 @@ function startGame() {
     data = getConfigGame()
     setScreenGame(data)
         // showScreenGame()
-        // gameRunning()
 
     isPoint()
-        // restart()
-    verificacaoGanhar()
-
+    let interval = addTime()
 }
+
+function addTime() {
+    let cont;
+    let interval = setInterval(() => {
+        console.log(cont)
+        let p = document.getElementById('point').children[0]
+        let tmp = parseInt(p.textContent)
+        tmp++;
+        p.textContent = tmp
+        if (ganhou()) {
+            clearInterval(interval)
+            console.log('parou')
+        }
+
+    }, 1000)
+}
+
+
+
+
 
 function isPoint() {
 
@@ -32,6 +49,7 @@ function isIdentic(img1, img2) {
 function makeAPoint() {
     let imgCells = document.getElementsByClassName('img-cells')
     let img;
+
     let jogadas = new Array();
     for (let indexI = 0; indexI < imgCells.length; indexI++) {
         if (imgCells[indexI].style.display != 'none' && imgCells[indexI].alt != 'ok') {
@@ -45,6 +63,7 @@ function makeAPoint() {
                     jogadas[0].alt = 'ok'
                     jogadas[1].alt = 'ok'
                     addPoint()
+
                     verificacaoGanhar()
                 } else {
                     console.log('n foi ponto')
@@ -66,10 +85,9 @@ function makeAPoint() {
 }
 
 function addPoint() {
-    let p = document.getElementById('point').children[0]
-    let tmp = parseInt(p.textContent)
-    tmp++
-    p.textContent = tmp
+    soundCoins.stop()
+    soundCoins.play()
+
 }
 
 function isPoiint(array) {
