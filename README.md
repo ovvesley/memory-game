@@ -1,6 +1,6 @@
 # Jogo da Memória
 
-https://vvesly.github.io/memory_game/index.html
+https://vvesly.github.io/memory-game/index.html
 
 
 ![Alt text](./redme-content/Tela%20Inicial.png "Title")
